@@ -38,9 +38,17 @@ app.get('/', (req,res)=>{
 });
 
 app.get('/about', (req,res)=>{
-  res.render('About.hbs',{
+  res.render('about.hbs',{
     pageTitle : 'About Page',
-    welcomeMessage : 'Some Text Here',
+    welcomeMessage : 'A crypto that will trade with all other global cryptos. BITCOIN,FIAT,ETHERIUM',
+    currentYear : new Date().getFullYear()
+  });
+});
+
+app.get('/projects', (req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle : 'Projects Page',
+    welcomeMessage : 'All My Projects',
     currentYear : new Date().getFullYear()
   });
 });
